@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <script
+      src="https://kit.fontawesome.com/4ab5cd7299.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Twine Knot</title>
+  </head>
+  <body>
+    <nav>
+      <div id="logo">
+        <p>Twine Knot</p>
+        <i class="fa-solid fa-scissors" style="color: white"></i>
+      </div>
+
+      <!-- Make this li's jump to section onClick -->
+
+      <ul>
+        <!-- <li>Products</li> -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <section>
+      <h2 id="hero-title">Custom Hand-made Home Decor</h2>
+      <img id="hero-image" src="/images/hero4.png" alt="" />
+    </section>
+
+    <section>
+      <h2 class="section-title">Current Products</h2>
+
+      <!-- Carousel Goes Here -->
+
+      <div id="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">1 / 3</div> -->
+          <img src="./images/slide4.jpg" style="width:500px; height: 500px;">
+          <div class="text">Christmas countdown hand painted on wood with twine accent</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">2 / 3</div> -->
+          <img src="./images/slide5.jpg" style="width:500px; height: 500px;">
+          <div class="text">Christmas countdown hand painted on wood with twine accent</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <!-- <div class="numbertext">3 / 3</div> -->
+          <img src="./images/slide6.jpg" style="width:500px; height: 500px;">
+          <div class="text">Hand-made twine candy canes with cranberry ornament</div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a id="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a id="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+
+
+    <section>
+        <!-- Card Section for Next Holiday or custom pieces -->
+      <h2 class="section-title">Available Soon & Custom Pieces</h2>
+
+      <div id="cards-container">
+        <div class="card">
+          <img src="./images/card1.jpeg" alt="Avatar" style="width: 100%" />
+          <div class="card-text">
+            <p>Valentine's Day</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/card2.jpg" alt="Avatar" style="width: 100%" />
+          <div class="card-text">
+            <p>Easter</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/card3.jpg" alt="Avatar" style="width: 100%" />
+          <div class="card-text">
+            <p>Everyday</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./images/card4.jpg" alt="Avatar" style="width: 100%" />
+          <div class="card-text">
+            <p>Custom</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About me:</h2>
+      <p>
+        Welcome to my website! My name is Alissa and I'm a stay-at-home mom who
+        loves to spend my time creating beautiful, handmade crafts. From
+        one-of-a-kind home decor to seasonal decorations, I take great pride in
+        my creations and enjoy sharing them with others. On this site, you'll
+        find a showcase of some of my favorite pieces, as well as information on
+        how to purchase them or commission your own custom project. Thank you
+        for visiting and I hope you enjoy my crafts as much as I enjoy making
+        them!
+      </p>
+    </section>
+
+    <footer id="contact">
+      <!-- LINK TO INSTA AND EMAIL -->
+
+      <p>Orders available by email or Instagram.</p>
+
+      <a href="https://www.instagram.com/twine.knot/" target="_blank"
+        ><i class="fa-brands fa-instagram"></i
+      ></a>
+      <a href="mailto:twineknothandmade@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      <p>twineknothandmade@gmail.com</p>
+
+      <p id="copyright">&#169; L.A. Christl 2022</p>
+    </footer>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+  
+  </body>
+</html>
