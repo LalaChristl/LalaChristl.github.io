@@ -48,27 +48,29 @@
       <div id="slideshow-container">
 
         <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-          <!-- <div class="numbertext">1 / 3</div> -->
-          <img src="./images/slide4.jpg" style="width:500px; height: 500px;">
-          <div class="text">Christmas countdown hand painted on wood with twine accent</div>
+        <div class="sliders-container">
+          <div class="mySlides fade">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img src="./images/slide4.jpg" style=" height: 500px;">
+            <div class="text">Christmas countdown hand painted on wood with twine accent</div>
+          </div>
+        
+          <div class="mySlides fade">
+            <!-- <div class="numbertext">2 / 3</div> -->
+            <img src="./images/slide5.jpg" style="height: 500px;">
+            <div class="text">Christmas countdown hand painted on wood with twine accent</div>
+          </div>
+        
+          <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="./images/slide6.jpg" style=" height: 500px;">
+            <div class="text">Hand-made twine candy canes with cranberry ornament</div>
+          </div>
+          
+            <!-- Next and previous buttons -->
+            <a id="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a id="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-      
-        <div class="mySlides fade">
-          <!-- <div class="numbertext">2 / 3</div> -->
-          <img src="./images/slide5.jpg" style="width:500px; height: 500px;">
-          <div class="text">Christmas countdown hand painted on wood with twine accent</div>
-        </div>
-      
-        <div class="mySlides fade">
-          <!-- <div class="numbertext">3 / 3</div> -->
-          <img src="./images/slide6.jpg" style="width:500px; height: 500px;">
-          <div class="text">Hand-made twine candy canes with cranberry ornament</div>
-        </div>
-      
-        <!-- Next and previous buttons -->
-        <a id="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a id="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
       <br>
       
@@ -132,14 +134,16 @@
 
       <p>Orders available by email or Instagram.</p>
 
-      <a href="https://www.instagram.com/twine.knot/" target="_blank"
-        ><i class="fa-brands fa-instagram"></i
-      ></a>
-      <a href="mailto:twineknothandmade@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      <div class="socials">
+        <a href="https://www.instagram.com/twine.knot/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="mailto:twineknothandmade@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+      </div>
       <p>twineknothandmade@gmail.com</p>
 
-      <p id="copyright">&#169; L.A. Christl 2022</p>
     </footer>
+    <p id="copyright">&#169; L.A. Christl 2022</p>
 
     <script>
       let slideIndex = 1;
